@@ -17,7 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
         ]);
-
+        require __DIR__.'/trust_proxies.php';
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {

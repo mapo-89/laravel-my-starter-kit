@@ -8,14 +8,14 @@ import { SidebarProvider, SidebarInset } from '@/Components/ui/sidebar'
 
 defineProps({
     title: String,
-    sidebar: { type: Boolean, default: false },
+    sidebarEnabled: { type: Boolean, default: true },
 })
 
 const page = usePage()
 
 const sidebarEnabled = computed(() => {
   if (page.props.sidebarEnabled !== undefined) return !!page.props.sidebarEnabled
-  return false
+  return true
 })
 </script>
 
